@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UFzZq9LOxo3MtJDvgRWI7A" LanguageVersion="2021.4.0.458" Version="0.128">
-  <NugetDependency Id="EEYSk9rCs8TLQ1HUJFqHly" Location="VL.CoreLib" Version="2021.4.0-0458-g12f67edc27" />
+<Document xmlns:p="property" Id="UFzZq9LOxo3MtJDvgRWI7A" LanguageVersion="2021.4.12.1374" Version="0.128">
+  <NugetDependency Id="EEYSk9rCs8TLQ1HUJFqHly" Location="VL.CoreLib" Version="2021.4.12" />
   <Patch Id="OF6M52TF0g1MIvRz41ucGu">
     <Canvas Id="Ue7xuqlBZHlLeRL5dLjZsS" DefaultCategory="Devices.Kinect2" CanvasType="FullCategory">
       <Canvas Id="ALzepdUffo2N2GS1PvjrMC" Name="Internal" Position="272,213">
@@ -4073,6 +4073,108 @@
             <Link Id="KP3GfXppfPGO19u25prsbC" Ids="A4mxkTvPaNdMWNA7Dobn59,Ia6NMHMnvilLWb79b4Rzs2" />
             <Link Id="G4LLCG1uyJzP5AkodPDQVd" Ids="Mh7V8k7PYn7MQWQT6jU5EP,Jw9u63Ya898NPgEAt8XtDx" />
             <Link Id="E9xcZ4VGSnyLAEGPeg0i54" Ids="Jxe8DISSQHNODDUBLhS0JI,JrFlVDfX6PfOqgUWmtFsZp" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ GestureDetector ************************
+
+-->
+        <Node Name="GestureDetector" Bounds="385,317" Id="Ms9NAtuJ2QbPAtkFt6o8TC">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="MTC3mg9GPaZPpPvPk8PDWx">
+            <Canvas Id="HIHSkQZgFn0MKmWcqRRD0y" CanvasType="Group">
+              <Node Bounds="371,288,74,26" Id="Ar3hUWtKuFYNpFGfLvWvrI">
+                <p:NodeReference LastCategoryFullName="VL.Devices.Kinect2.GestureDetector" LastSymbolSource="VL.Devices.Kinect2.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="GestureDetector" />
+                  <CategoryReference Kind="AssemblyCategory" Name="GestureDetector" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="I4oAFQi230oMTMCnkpXHGk" Name="Kinect Sensor" Kind="InputPin" />
+                <Pin Id="DiX1HHe8xl1LqvrINSKkhu" Name="Gesture Result View" Kind="InputPin" />
+                <Pin Id="EhhH4KJ1ewKNNvXitXirXk" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <ControlPoint Id="G6B1gSVTwCMMBJaXS31qlB" Bounds="374,189" />
+              <Node Bounds="502,97,87,26" Id="B5ArIUd6cDeNvIUmJlP825">
+                <p:NodeReference LastCategoryFullName="Devices.Kinect2.KinectSensorHandle" LastSymbolSource="VL.Devices.Kinect2.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="KinectSensorHandle" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="V1omQCQtOPPOnjeGwww77b" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Pad Id="T1v77mBlCcUPUhPbYdTv8M" SlotId="QiviNWUYsXALr3gM2eEwnx" Bounds="568,196">
+                <p:Value />
+              </Pad>
+              <Node Bounds="556,281" Id="JeYvFKrREfTOISYgvYH7H0">
+                <p:NodeReference LastCategoryFullName="VL.Devices.Kinect2.GestureDetector" LastSymbolSource="VL.Devices.Kinect2.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="GestureResult" />
+                </p:NodeReference>
+                <Pin Id="EUP7dFKkIKiMTra8L8EUQ3" Name="Input" Kind="StateInputPin" />
+                <Pin Id="FbfaDw1yvAOPyVReX9g5eV" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="SEFGJ1irUv1PHNOQA7Wxsu" Name="Gesture Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="442,224,83,26" Id="SPeeYIDdAhHOH5dlDYRMy1">
+                <p:NodeReference LastCategoryFullName="VL.Devices.Kinect2.GestureDetector.GestureResultView" LastSymbolSource="VL.Devices.Kinect2.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="GestureResultView" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="UsSPsyk8Oi4QVUrM95qGKg" Name="Body Index" Kind="InputPin" />
+                <Pin Id="AX4ONOFVWwtOdaG9fP4dXs" Name="Is Tracked" Kind="InputPin" />
+                <Pin Id="BdM2kEdE4hyPG2ValwKlBW" Name="Detected" Kind="InputPin" />
+                <Pin Id="L0lBvWq5hOIOH3SeXaebum" Name="Confidence" Kind="InputPin" />
+                <Pin Id="JC6pMcvamnjMsiwEYxn5Ba" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="370,367,79,26" Id="VWrp6sXdz7pLPHARevDa3a">
+                <p:NodeReference LastCategoryFullName="VL.Devices.Kinect2.GestureDetector" LastSymbolSource="VL.Devices.Kinect2.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="GestureDetector" />
+                  <Choice Kind="OperationCallFlag" Name="GestureResult" />
+                </p:NodeReference>
+                <Pin Id="EmRAfeYfMzwN1YuWPvK7GU" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Eifl4gJLNilPpozY4KuOED" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="Gt1NbZRmeX9QbkbFjP9qq1" Name="Gesture Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="453,465,111,26" Id="SoEFJQZzYVYNXD5HMCaZce">
+                <p:NodeReference LastCategoryFullName="VL.Devices.Kinect2.GestureDetector.GestureResultView" LastSymbolSource="VL.Devices.Kinect2.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="GestureResultView" />
+                  <Choice Kind="OperationCallFlag" Name="UpdateGestureResult" />
+                </p:NodeReference>
+                <Pin Id="IEaZn8XJmDUL2HSn22kT15" Name="Input" Kind="StateInputPin" />
+                <Pin Id="NBdsOOAUQDxPmP7ziwqMiH" Name="Is Body Tracking Id Valid" Kind="InputPin" />
+                <Pin Id="C2AvRo5y1C5La6xAaW97eX" Name="Is Gesture Detected" Kind="InputPin" />
+                <Pin Id="PqMYtstBrU8OTDvyiwjmu7" Name="Detection Confidence" Kind="InputPin" />
+                <Pin Id="STNzEbq4DNONe6q6ZMYgcP" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Pad Id="FVKXnw51NUZMQSFMnv3ftf" Comment="" Bounds="372,339" isIOBox="true" />
+            </Canvas>
+            <Patch Id="Sn9jbSmbqdUNUYGT9YnFQA" Name="Create" />
+            <Patch Id="QnShjjQ3fCuPLxLVO9oSzy" Name="Update">
+              <Pin Id="E3eUkYeoLGILU7p0zIm68B" Name="Kinect Sensor" Kind="InputPin" />
+            </Patch>
+            <!--
+
+    ************************  ************************
+
+-->
+            <ProcessDefinition Id="CBCzuw0AfvmOAROUWOaSpS">
+              <Fragment Id="ToiM0zRixUJOI9C2hKkhlk" Patch="Sn9jbSmbqdUNUYGT9YnFQA" Enabled="true" />
+              <Fragment Id="OBjx2htZyGlODqVdgIX1FX" Patch="QnShjjQ3fCuPLxLVO9oSzy" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="URAbl8qniQ8OwenRyUiye1" Ids="E3eUkYeoLGILU7p0zIm68B,G6B1gSVTwCMMBJaXS31qlB" IsHidden="true" />
+            <Link Id="ETv87TKa46rPyU3cOo7DW7" Ids="G6B1gSVTwCMMBJaXS31qlB,I4oAFQi230oMTMCnkpXHGk" />
+            <Slot Id="QiviNWUYsXALr3gM2eEwnx" Name="Output" />
+            <Link Id="Eyv9gvkNCwoLGCsP6JNp3w" Ids="V1omQCQtOPPOnjeGwww77b,T1v77mBlCcUPUhPbYdTv8M" />
+            <Link Id="FLfH7iWKGAfPQeh5a8Ktm3" Ids="JC6pMcvamnjMsiwEYxn5Ba,DiX1HHe8xl1LqvrINSKkhu" />
+            <Link Id="NeS9y5MjjyTO7zV5Fkha6p" Ids="EhhH4KJ1ewKNNvXitXirXk,FVKXnw51NUZMQSFMnv3ftf" />
+            <Link Id="LhkTysvyv8jLP1ECROgxkp" Ids="FVKXnw51NUZMQSFMnv3ftf,EmRAfeYfMzwN1YuWPvK7GU" />
+            <Link Id="Tq7D25zHiUJQJwUxza7Da2" Ids="Gt1NbZRmeX9QbkbFjP9qq1,IEaZn8XJmDUL2HSn22kT15" />
           </Patch>
         </Node>
       </Canvas>
@@ -8596,6 +8698,50 @@
               <Pin Id="IJkFPRAH5jHOS8GOBI6rH9" Name="Input 2" Kind="InputPin" />
               <Pin Id="IziIxffFYsUOh1e1hrD9K6" Name="Output" Kind="OutputPin" />
             </Node>
+            <Node Bounds="2005,385,152,199" Id="MtagICOfBGkMCqAKdumCS8">
+              <p:NodeReference LastCategoryFullName="System.Resources" LastSymbolSource="CoreLibBasics.vl">
+                <CategoryReference Kind="Category" Name="Resources" />
+                <Choice Kind="OperationCallFlag" Name="BindNew" />
+                <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+              </p:NodeReference>
+              <Pin Id="Mb9JLAf2Se6NtfQ7mjUFht" Name="Input" Kind="InputPin" />
+              <Pin Id="UDdoZgkAiNVPk0E3lYUnj7" Name="Output" Kind="OutputPin" />
+              <Patch Id="F92KBZD7SWvMXQyvxrXvNX" Name="Select" ManuallySortedPins="true">
+                <Pin Id="JPdcmpN4gNxPKMW2oGgkSa" Name="Input" Kind="InputPin" />
+                <Pin Id="CzJOx8JRJqyMHSffCIgCaR" Name="Result" Kind="OutputPin" />
+                <ControlPoint Id="MrVMFZBB0mdLZdTe4BdAQt" Bounds="2021,393" />
+                <ControlPoint Id="VjnN1wm4sVcNu4YMdvF43h" Bounds="2106,577" />
+                <Node Bounds="2019,483,111,26" Id="CQepoaYYTMRNjlwb9v04nq">
+                  <p:NodeReference LastCategoryFullName="Microsoft.Kinect.KinectSensor" LastSymbolSource="Microsoft.Kinect.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="KinectSensor" />
+                    <Choice Kind="OperationCallFlag" Name="InfraredFrameSource" />
+                  </p:NodeReference>
+                  <Pin Id="Sav7j5rBN2xMjq8bJqlmWH" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="OZaMngMrifZNl1U98cyYxC" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="Bx1CoVYbPlQQa9pu25kY5j" Name="Infrared Frame Source" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="2019,529,90,26" Id="Ph4rDlEN8HwL3sxuHY1xJf">
+                  <p:NodeReference LastCategoryFullName="Microsoft.Kinect.InfraredFrameSource" LastSymbolSource="Microsoft.Kinect.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="OpenReader" />
+                    <CategoryReference Kind="AssemblyCategory" Name="InfraredFrameSource" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="BDLZeh8dxPqOwYoBnJaRoA" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="EHg6PSbHTtcQcvxTb0GKIR" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="VHMZ8kFgjOGPbGnxMezGgm" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="2019,439,87,26" Id="G2hIAWUCUKcPyfqa1RHsnh">
+                  <p:NodeReference LastCategoryFullName="Devices.Kinect2.KinectSensorHandle" LastSymbolSource="VL.Devices.Kinect2.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="GetSensor" />
+                  </p:NodeReference>
+                  <Pin Id="EKFhCBMMIchMGH9yGP6ym5" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Qa8ig3AsS64OCusaOJDNac" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="FSE2P0s6O5WQKpXbNgueQz" Name="Sensor" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
           </Canvas>
           <Patch Id="ElHmOSEb4HOLGgvsNHmTUk" Name="Create (Internal)" ParticipatingElements="NZScFHWxoWeMJ9Uz40mBaX,USXBDxJMKX5Ow43l9TwRid,JtFfub6kI10QQJKxblQn4R" />
           <Patch Id="OsMTXktfDnuQHkcB4tXoZR" Name="Update (Internal)" ManuallySortedPins="true">
@@ -8994,6 +9140,13 @@
           </Patch>
           <Link Id="PMthZpPClVfOJRPB9sIsIy" Ids="PUGb5DLw5DWPm0qKt3wlGc,PHXrucwSH2uNkEAGZdo5Qr" />
           <Link Id="HOxxaOLUseDOGF5YDSfIgS" Ids="KojnNbRW2PVLxRKJ3SdW1L,Q9JfQcQLlIiQAD4H2ujirk" />
+          <Link Id="K4EJtQ0gDBENK3kdCa2RLe" Ids="JPdcmpN4gNxPKMW2oGgkSa,MrVMFZBB0mdLZdTe4BdAQt" IsHidden="true" />
+          <Link Id="JubDmp8xOUaOOmgzaqDyqe" Ids="VjnN1wm4sVcNu4YMdvF43h,CzJOx8JRJqyMHSffCIgCaR" IsHidden="true" />
+          <Link Id="EAI7KOHUQQWOWw3OXgOkrM" Ids="MrVMFZBB0mdLZdTe4BdAQt,EKFhCBMMIchMGH9yGP6ym5" />
+          <Link Id="OFcGftOvkE7OV3olP4f5qR" Ids="FSE2P0s6O5WQKpXbNgueQz,Sav7j5rBN2xMjq8bJqlmWH" />
+          <Link Id="JxOeptLWC8SOCppEdAzM5Y" Ids="VHMZ8kFgjOGPbGnxMezGgm,VjnN1wm4sVcNu4YMdvF43h" />
+          <Link Id="JUpRWY5BBLTOIBbfC0tCuA" Ids="Bx1CoVYbPlQQa9pu25kY5j,BDLZeh8dxPqOwYoBnJaRoA" />
+          <Link Id="A1lf7TYs03nNQMYmfBy5Yr" Ids="CjFqCd3zO3LNp3LI7v9HDd,Mb9JLAf2Se6NtfQ7mjUFht" />
         </Patch>
       </Node>
       <!--
@@ -9070,11 +9223,12 @@
   <PlatformDependency Id="CJ99AqcYIMALGuFTkYA7Is" Location="./lib/net472/VL.Devices.Kinect2.dll" />
   <PlatformDependency Id="S36JEFIXXVvMre7qt6H783" Location="System" />
   <PlatformDependency Id="JMvORQOQIzrPEj9eCKbrF5" Location="System.Runtime" />
-  <NugetDependency Id="K4ICfeTj9dxLVvHqmGPgT9" Location="VL.Core" Version="2021.4.0-0458-g12f67edc27" />
+  <NugetDependency Id="K4ICfeTj9dxLVvHqmGPgT9" Location="VL.Core" Version="2021.4.12" />
   <PlatformDependency Id="BUpgGtLZTuWOOQIIwQPuZE" Location="System.Runtime.InteropServices" />
-  <NugetDependency Id="K4aTqsYyX3qOyQBCvM0PDS" Location="VL.Skia" Version="2021.4.0-0458-g12f67edc27" />
-  <NugetDependency Id="R4VFKgpnMLVNLeeooXue2t" Location="VL.EditingFramework" Version="2021.4.0-0458-g12f67edc27" />
+  <NugetDependency Id="K4aTqsYyX3qOyQBCvM0PDS" Location="VL.Skia" Version="2021.4.12" />
+  <NugetDependency Id="R4VFKgpnMLVNLeeooXue2t" Location="VL.EditingFramework" Version="2021.4.12" />
   <PlatformDependency Id="MdTDzLxFTE9LvxOyk7EWeV" Location="./lib/net472/Microsoft.Kinect.Face.dll" />
-  <NugetDependency Id="Te8jni1po0DNSBTooSrGft" Location="VL.Lang" Version="2021.4.0-0458-g12f67edc27" />
-  <NugetDependency Id="IC3JlEyjkaiOs1iFPK4qXv" Location="VL.Skia3d" Version="1.0.36-alpha" />
+  <NugetDependency Id="Te8jni1po0DNSBTooSrGft" Location="VL.Lang" Version="2021.4.12" />
+  <NugetDependency Id="IC3JlEyjkaiOs1iFPK4qXv" Location="VL.Skia3d" Version="1.1.1" />
+  <PlatformDependency Id="VbXLlaxbGvbQBhHEcv6zy7" Location="./lib/net472/Microsoft.Kinect.VisualGestureBuilder.dll" />
 </Document>

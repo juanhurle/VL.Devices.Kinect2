@@ -21,5 +21,8 @@
     <Reference Include="Microsoft.Kinect.Face">
       <HintPath>..\lib\net472\Microsoft.Kinect.Face.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Kinect.VisualGestureBuilder">
+      <HintPath>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\bin\Microsoft.Kinect.VisualGestureBuilder.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
