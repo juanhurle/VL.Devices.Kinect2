@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="S3BYXYbBcOQLrAesdzH6KE" LanguageVersion="2020.1.3.147" Version="0.128">
-  <NugetDependency Id="BfQ9BqV8poEPnZWKYQROv0" Location="VL.CoreLib" Version="2020.1.3" />
+<Document xmlns:p="property" Id="S3BYXYbBcOQLrAesdzH6KE" LanguageVersion="2021.4.12.1374" Version="0.128">
+  <NugetDependency Id="BfQ9BqV8poEPnZWKYQROv0" Location="VL.CoreLib" Version="2021.4.12" />
   <Patch Id="DYRuwp4ufPyNyKtULooXvw">
     <Canvas Id="QYFOXjrMgATQTcpBMDj2hQ" DefaultCategory="Devices.Kinect2.HDE" CanvasType="FullCategory">
       <!--
@@ -73,16 +73,8 @@
               </p:NodeReference>
               <Pin Id="QkpFEwKxkEqLwhsbvvudUq" Name="Input" Kind="InputPin" />
               <Pin Id="CbmF7nlfYhrLVhO57XvnYM" Name="Color" Kind="InputPin" />
-              <Pin Id="RMKWQuF6llAQFB58S7b8se" Name="Stroke Width" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="Float32" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="G7D2VUNKa4IOS31x3tqYK4" Name="Join" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="Graphics.Skia.Unwrapped.Enums" LastSymbolSource="VL.Skia.vl">
-                  <Choice Kind="TypeFlag" Name="SKStrokeJoin" />
-                </p:TypeAnnotation>
-              </Pin>
+              <Pin Id="RMKWQuF6llAQFB58S7b8se" Name="Stroke Width" Kind="InputPin" />
+              <Pin Id="G7D2VUNKa4IOS31x3tqYK4" Name="Join" Kind="InputPin" />
               <Pin Id="PHUDQzUuyW6OjblnXjUJRf" Name="Cap" Kind="InputPin" DefaultValue="Round">
                 <p:TypeAnnotation LastCategoryFullName="Graphics.Skia.Unwrapped.Enums" LastSymbolSource="VL.Skia.vl">
                   <Choice Kind="TypeFlag" Name="SKStrokeCap" />
@@ -186,31 +178,19 @@
               <Pin Id="FzZIMYTg7JCLsLhx5G5NKw" Name="Output" Kind="StateOutputPin" />
             </Node>
           </Canvas>
-          <Patch Id="RrBljYell0dLgtpvASrgng" Name="Create" />
           <ProcessDefinition Id="OgkbRf4imvFLZWarUScUdC" HasStateOut="true">
             <Fragment Id="Itb4MGsYBdALV8URGzXV4u" Patch="RrBljYell0dLgtpvASrgng" Enabled="true" />
             <Fragment Id="JIyYPpMhG9SMEdeu3Ldsr9" Patch="P2IoUKgM6EEN11fMVQYm7y" Enabled="true" />
             <Fragment Id="RPhf68Ef6GhOqSO2Dqfkci" Patch="TXCL44odG6SQPhcrKvJDNn" Enabled="true" />
             <Fragment Id="ALqeieydVYoL8lmNXWWRvs" Patch="PGE5hxJS6wfK9ompQzJxHS" Enabled="true" />
           </ProcessDefinition>
-          <Patch Id="P2IoUKgM6EEN11fMVQYm7y" Name="CreateView">
-            <Pin Id="BolpRcjR6zWLU5jha4KTjL" Name="Result" Kind="OutputPin" />
-          </Patch>
-          <Patch Id="TXCL44odG6SQPhcrKvJDNn" Name="Split">
-            <Pin Id="BhhQwAmfsRSOeVDiMyUIPT" Name="Paint" Kind="OutputPin" />
-            <Pin Id="JF0LanGLk8IMhtyfEkhpnT" Name="Value" Kind="OutputPin" />
-          </Patch>
           <Slot Id="RuoMCZhg6MPNEgZi4nLdY4" Name="Value">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation p:Type="TypeReference">
               <Choice Kind="TypeFlag" Name="Skeleton" />
             </p:TypeAnnotation>
           </Slot>
-          <Patch Id="PGE5hxJS6wfK9ompQzJxHS" Name="Update">
-            <Pin Id="Lm6nFARNTv5OnNjx26KKSv" MergeId="124076" Name="Value" Kind="InputPin" />
-            <Pin Id="BKKqAaDZJ9uQLN16BQVIOS" MergeId="124077" Name="Paint" Kind="InputPin" />
-          </Patch>
           <Slot Id="QENcNmmzNcDMhkf1ibZSJH" Name="Paint">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation p:Type="TypeReference">
               <Choice Kind="TypeFlag" Name="SkiaPaint" />
             </p:TypeAnnotation>
           </Slot>
@@ -224,6 +204,18 @@
           <Link Id="DJoS7Ol7ezANkkYARdapoG" Ids="FXCmMC0AgXxQIzJWkYnzKa,HmjB43ItpMDLCEmqnppsG7" />
           <Link Id="Erh5dWnk612Mkeo8tF7wNr" Ids="LSztrhj3z9hLKt1GhKyYHP,BolpRcjR6zWLU5jha4KTjL" IsHidden="true" />
           <Link Id="KBos2sdiiQmOefQUzrisJT" Ids="FzZIMYTg7JCLsLhx5G5NKw,LSztrhj3z9hLKt1GhKyYHP" />
+          <Patch Id="RrBljYell0dLgtpvASrgng" Name="Create" />
+          <Patch Id="P2IoUKgM6EEN11fMVQYm7y" Name="CreateView">
+            <Pin Id="BolpRcjR6zWLU5jha4KTjL" Name="Result" Kind="OutputPin" />
+          </Patch>
+          <Patch Id="TXCL44odG6SQPhcrKvJDNn" Name="Split">
+            <Pin Id="JF0LanGLk8IMhtyfEkhpnT" Name="Value" Kind="OutputPin" />
+            <Pin Id="BhhQwAmfsRSOeVDiMyUIPT" Name="Paint" Kind="OutputPin" />
+          </Patch>
+          <Patch Id="PGE5hxJS6wfK9ompQzJxHS" Name="Update">
+            <Pin Id="Lm6nFARNTv5OnNjx26KKSv" MergeId="124076" Name="Value" Kind="InputPin" />
+            <Pin Id="BKKqAaDZJ9uQLN16BQVIOS" MergeId="124077" Name="Paint" Kind="InputPin" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -411,11 +403,7 @@
               <Pin Id="ETc3bAYwTPfQQFoh2cHVyp" Name="Line Height in em" Kind="InputPin" />
               <Pin Id="D9RPTirwl70M7a2xBJPIyn" Name="Horizontal Alignment" Kind="InputPin" />
               <Pin Id="LzzUBrK0qwcMvHzOC1EjZM" Name="Vertical Alignment" Kind="InputPin" />
-              <Pin Id="CnqOcN2kYJdMS5r0fZ2DMQ" Name="Show Helpers" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="Boolean" />
-                </p:TypeAnnotation>
-              </Pin>
+              <Pin Id="CnqOcN2kYJdMS5r0fZ2DMQ" Name="Show Helpers" Kind="InputPin" />
               <Pin Id="VtRAq6lPTDqMq75fYvouPe" Name="Output" Kind="OutputPin" />
             </Node>
             <Node Bounds="720,649,25,19" Id="HRYekU5yspoPaZ0Htrs2aL">
@@ -461,6 +449,8 @@
               </p:NodeReference>
               <Pin Id="GsazFF9ljMHOqJWZwjklag" Name="Input" Kind="InputPin" />
               <Pin Id="F7D8xcnr18ZNtUmSoHEcN0" Name="Input 2" Kind="InputPin" />
+              <Pin Id="D5EvzWnBFaGLXLKKrAq9lX" Name="Debug" Kind="InputPin" />
+              <Pin Id="CX4XXwEPNxtLfW2gtZJpRc" Name="Enabled" Kind="InputPin" />
               <Pin Id="UlLe4UG8m0TN3JxANsjzSL" Name="Output" Kind="OutputPin" />
             </Node>
             <Node Bounds="468,721" Id="VLvBRU52Nk7MfF1L6llkXD">
@@ -586,8 +576,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="PplJ8M06DDYNWsWk2Slfxl" Location="VL.Skia" Version="2020.1.3" />
-  <NugetDependency Id="Vx0IDKk0ZwjLq5dkCVhG5Z" Location="VL.HDE" Version="2020.1.3" />
-  <NugetDependency Id="TvjkKT0YJvdOY1DCMJ4K9z" Location="VL.Devices.Kinect2" Version="0.0.0.0" />
-  <NugetDependency Id="Epkg3yP7n13MeneuUdSUuT" Location="VL.Skia3d" Version="0.0.0.0" />
+  <NugetDependency Id="PplJ8M06DDYNWsWk2Slfxl" Location="VL.Skia" Version="2021.4.12" />
+  <NugetDependency Id="Vx0IDKk0ZwjLq5dkCVhG5Z" Location="VL.HDE" Version="2021.4.12" />
+  <NugetDependency Id="TvjkKT0YJvdOY1DCMJ4K9z" Location="VL.Devices.Kinect2" Version="1.2.1" />
+  <NugetDependency Id="Epkg3yP7n13MeneuUdSUuT" Location="VL.Skia3d" Version="1.1.1" />
 </Document>

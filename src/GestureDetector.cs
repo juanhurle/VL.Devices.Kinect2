@@ -231,7 +231,7 @@ namespace VL.Devices.Kinect2
         private void Source_TrackingIdLost(object sender, TrackingIdLostEventArgs e)
         {
             // update the GestureResultView object to show the 'Not Tracked' image in the UI
-            //this.GestureResultView.UpdateGestureResult(false, false, 0.0f);
+            this.gestureResultView.UpdateGestureResult(false, false, 0.0f);
         }
 
         /// <summary>
